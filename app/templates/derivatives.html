@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Derivatives</title>
+        <script type="text/javascript" async
+  src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+    </head>
+    <body>
+        <h1>Derivatives!</h1>
+        <p>\[{{ problem['new'] }}\]
+        <form action="derivatives" method="POST">
+            <input type="text" name="text">
+            <input type="submit" name="derivatives" value="Go!">
+        </form>
+        </p>
+        {% if input_text %}
+        <p> Old problem: \[{{ problem['old'] }}\]</p>
+        <p> Your solution: \[{{ input_text }}\]</p>
+        {% if correct %}
+        <p>Correct</p>
+        {% endif %}
+        {% endif %}
+    </body>
+</html>
